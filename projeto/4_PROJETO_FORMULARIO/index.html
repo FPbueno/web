@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cadastro de doação de animais</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h3>Cadastre seu animal aqui para adoção</h3>
+			</div>
+			<div class="form-container">
+				<div class="form-header">
+					<p>Cadastro</p>
+				</div>
+				<div class="form-body">
+					<h1 class="form-title">Doe animais mais rapido, fácil e seguro!</h1>
+					<p>Descreva as características do seu animal e marque todas os opicionais e características que ele possui</p>
+					<form>
+						<div class="box-input">
+							<label for="title">
+								Título do anúncio: 
+								<span class="required-field">*</span>
+							</label>
+							<input type="text" name="title" id="title" class="block" 
+								placeholder="Defina um título para o seu animal"
+								minlength="1" maxlength="30" required>
+						</div>
+						<div class="box-input">
+							<label for="price">quantidade: (Em caso de procriação):
+								<span class="required-field">*</span>
+							</label>
+							<input type="number" id="price" name="price" class="block" required>
+						</div>
+						<div class="box-input">
+							<label for="description">Motivo da doação: 
+								<span class="required-field">*</span>
+							</label>
+							<textarea
+								id="description" 
+								name="description" 
+								class="block"
+								cols="30"
+								rows="10"
+								required
+								placeholder="Descreva o motivo da doação" 	
+							>
+							</textarea>
+						</div>
+						<div class="box-input">
+							<label for="unique_owner">Único dono? 
+								<span class="required-field">*</span>
+							</label>
+							<select id="unique_owner" name="unique_owner" required>
+								<option value="">Selecione...</option>
+								<option value="1">Sim</option>
+								<option value="0">Não</option>
+							</select>
+						</div>
+						<div class="box-input">
+							<label for="brand">
+								Raça: 
+								<span class="required-field">*</span>
+							</label>
+							<input type="text" name="brand" id="brand" class="block" 
+								placeholder="Digite a raça do seu animal" required>
+						</div>
+						<div class="box-input">
+							<label for="model">
+								classe: 
+								<span class="required-field">*</span>
+							</label>
+							<input type="text" name="model" id="model" class="block" 
+								placeholder="Digite o tipo de animal: / mamífero, roedor, ave etc..." required>
+						</div>
+						<div class="box-input">
+							<label for="mileage">
+								Idade: 
+								<span class="required-field">*</span>
+							</label>
+							<input type="number" name="mileage" id="mileage" class="block" 
+							required>
+						</div>
+						<div class="box-input">
+							<label for="purchase_date">
+								Data de nascimento do animal: 
+								<span class="required-field">*</span>
+							</label>
+							<input 
+								type="date" 
+								name="purchase_date" 
+								id="purchase_date" 
+								class="block" 
+								required
+							>
+						</div>
+						<div class="box-input">
+							<p>Gênero: <span class="required-field">*</span></p>
+							<input type="radio" id="manual" name="gear">
+							<label for="manual">Macho</label>
+							<input type="radio" id="auto" name="gear">
+							<label for="auto">Fêmea</label>
+						</div>
+						<div class="optional_box">
+							<p>Possíveis dificiências:</p>
+							<ul class="optional_list">
+								<li>
+									<input type="checkbox" id="airbag" name="optional[]" value="airbag">
+									<label for="airbag">Física</label>
+								</li>
+								<li>
+									<input type="checkbox" id="alarm" name="optional[]" value="alarm">
+									<label for="alarm">Cegueira</label>
+								</li>
+								<li>
+									<input type="checkbox" id="ac" name="optional[]" value="ac">
+									<label for="ac">Motora</label>
+								</li>
+								<li>
+									<input type="checkbox" id="eletric_lock" name="optional[]" value="eletric_lock">
+									<label for="eletric_lock">Surdez</label>
+								</li>
+							</ul>
+						</div>
+						<div class="optional_box">
+							<ul class="optional_list">
+								<li>
+									<input type="checkbox" id="eletric_window" name="optional[]" value="eletric_window">
+									<label for="eletric_window">Obesidade</label>
+								</li>
+								<li>
+									<input type="checkbox" id="speakers" name="optional[]" value="speakers">
+									<label for="speakers">Alergia alimentar </label>
+								</li>
+								<li>
+									<input type="checkbox" id="reverse_camera" name="optional[]" value="reverse_camera">
+									<label for="reverse_camera">Nenhuma</label>
+								</li>
+								<li>
+									<input type="checkbox" id="leather_seat" name="optional[]" value="leather_seat">
+									<label for="leather_seat">Outra</label>
+								</li>
+							</ul>
+						</div>
+						<div class="box-input">
+							<label for="description">Deficiência: (Caso a opção marcada acima foi "Outra"): 
+								<span class="required-field">*</span>
+							</label>
+							<textarea
+								id="description" 
+								name="description" 
+								class="block"
+								cols="30"
+								rows="10"
+								required
+								placeholder="Descreva a deficiência" 	
+							>
+							</textarea>
+						</div>
+						<div class="box-input">
+							<p>Envie imagens do animal: <span class="required-field">*</span></p>
+							<input 
+								type="file" 
+								multiple accept="image/png, image/jpeg" 
+								id="images"
+								name="images"
+								required
+							>
+						</div>
+						<input type="submit" class="btn-submit" value="Cadastrar">
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
